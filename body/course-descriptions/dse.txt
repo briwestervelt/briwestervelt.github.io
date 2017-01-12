@@ -1,0 +1,1 @@
+The course features programs of realistic complexity. The programs utilize data structures (strings, lists, graphs, stacks) and algorithms (searching, sorting, etc.) for manipulating these data structures. The course emphasizes interactive design and includes the use of microcomputer systems and direct access data files. 

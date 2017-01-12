@@ -1,0 +1,94 @@
+<style>
+li{
+  margin-bottom: 0.4em;
+}
+
+h1{
+  margin-bottom: -0.3em;
+}
+
+.top-space{
+  margin-bottom: 5vh;
+}
+
+.row{
+  margin-bottom: 0.3em;
+}
+
+.semester-label{
+  text-decoration: underline;
+}
+
+#back-btn{
+  margin-top: 2em;
+  margin-bottom: 1em;
+  width: 15em;
+}
+</style>
+
+<div class="top-space"></div>
+
+<div class="section-highlight">
+  <div class="container">
+    <div class="row text-center">
+      <h1>What Is Clinic?</h1>
+    </div>
+    <div class="row">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-8">
+        <h3>Hands-on</h3>
+        <p>
+          Clinic courses are courses unique to Rowan University which allow engineering students to get
+          immediate hands-on industry experience.
+          These are usually general engineering courses which teach core concepts
+          and almost always involve hands-con projects.
+          Rowan engineers take one clinic course each semester,
+          for a total of eight clinics.
+        </p>
+        <h3>Freshman/Sophomore Clinic</h3>
+        <p>
+          The first four clinics each have a set of criteria that professors must teach.
+          The other content and assignments are generally the choice of the professor.
+          Criteria for the first four semsters is as follows:
+        </p>
+        <ol>
+          <li>
+            General engineering information, such as significant figures
+          </li>
+          <li>
+            Engineering statistics with a strong emhpasis on statistical error
+          </li>
+          <li>
+            Technical Writing
+          </li>
+          <li>
+            Public Speaking
+          </li>
+        </ol>
+        <h3>Junior/Senior Clinic</h3>
+        <p>
+          The final four clnics are completed in small teams.
+          There are hundereds of available projects supervised by
+          various professors, local businesses, and industry professionals.
+          This is where engineers at Rowan University get their most valuable
+          hands-on experience, working side by side with those already in the field.
+        </p>
+      </div>
+      <div class="col-sm-2"></div>
+    </div>
+    <div class="row text-center">
+      <button id="back-btn" class="btn-custom">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        Return To Course History
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+$(document).ready(function(){
+  $("#back-btn").click(function(){
+    window.close();
+  });
+});
+</script>

@@ -1,0 +1,1 @@
+The first course in electronic devices and circuit design covers the fundamentals of circuits involving diodes, bipolar junction transistors and field effect transistors in a simulation and laboratory environment. The basics of circuit operation and modeling are covered along with applications to multistage amplifier design. The SPICE software is used as a simulation tool. 

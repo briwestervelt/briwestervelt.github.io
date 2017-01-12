@@ -1,0 +1,67 @@
+<style>
+#captcha-submit-btn{
+  display: inline-block;
+  border: none;
+  width: 7em;
+}
+
+.outline{
+  width: 100vw;
+}
+
+.top-space{
+  margin-bottom: 15vh;
+}
+
+.g-recaptcha{
+  display: inline-block;
+}
+
+.bottom-space{
+  margin-bottom: 3em;
+}
+
+#captcha-error{
+  color: red;
+}
+</style>
+
+<div id="contact-page">
+  <div class="top-space"></div>
+  <div class="outline container section-highlight">
+    <div class="row bottom-space"></div>
+    <div class="row bottom-space text-center">
+      <h5 class="instruction-text">Please complete the following check and click the submit button before continuing to the contact page<h5>
+    </div>
+    <div class="row bottom-space">
+      <div class="text-center">
+        <div class="g-recaptcha" data-sitekey="6LcdyBAUAAAAAMG3DorxILHN9eJQ9xuNb5hXsrYZ"></div>
+        <h5 id="captcha-error"></h5>
+      </div>
+    </div>
+    <div class="row bottom-space">
+      <div class="text-center">
+        <button type="button" id="captcha-submit-btn" class="btn-custom">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+function checkCaptcha(){
+  return (grecaptcha.getResponse().length != 0);
+}
+
+$("#captcha-submit-btn").click(function(){
+  var captchaSuccess = checkCaptcha();
+  if(captchaSuccess){
+    $("#contact-page").empty();
+    $("#contact-page").load("body/bOtSuCk/contact.html", function(){
+      $.getScript("body/bOtSuCk/completeForm.js");
+    });
+  }
+  else{
+    $("#captcha-error").text("Please check the captcha box");
+  }
+});
+</script>

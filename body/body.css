@@ -1,0 +1,54 @@
+.section-highlight{
+  background: var(--slightly-light);
+}
+
+.subsection-highlight{
+  background: var(--very-dark);
+  color: #FFFFFF;
+}
+
+.match-list{
+  background: #F2F2F2;
+  border-radius: 5px;
+  height: 1.35em;
+  line-height: 1.3em;
+}
+
+.black{
+  border: 1px solid black;
+}
+
+.secondary-foreground{
+  color: var(--secondary-foreground-color);
+}
+
+.offwhite-foreground{
+  color: var(--very-light);
+}
+
+.offwhite-background{
+  background-color: var(--very-light);
+}
+
+.panel-body{
+  font-size: 16px;
+}
+
+.btn-custom{
+  background-color: var(--very-dark);
+  color: var(--very-light);
+  border: none;
+  height: 3em;
+}
+
+.btn-custom:hover{
+  background-color: var(--slightly-dark);
+  color: var(--foreground-color);
+}
+
+.btn-custom:active{
+  top: 1px;
+  box-shadow: none;
+  background-color: var(--very-light);
+  color: var(--foreground-color);
+}

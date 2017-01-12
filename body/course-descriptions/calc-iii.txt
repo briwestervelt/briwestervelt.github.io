@@ -1,0 +1,1 @@
+This course includes: vectors, vector functions, velocity, acceleration, partial differentiation, directional derivatives, multiple integration, and vector calculus. The student is expected to use computer software, such as Mathematica, in addition to the graphing calculator. 

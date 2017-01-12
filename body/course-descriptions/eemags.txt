@@ -1,0 +1,1 @@
+Engineering electromagnetics covers applications of electrostatics, magnetostatics, quasistatics, and electromagnetic wave propogation in contemporary electrical engineering practice. The course also covers numerical modeling/analysis of electromagnetic systems using appropriate software and laboratory-based measurements. 

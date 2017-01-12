@@ -1,0 +1,1 @@
+The first course in digital systems covering boolean algebra, switching theory, minimization, asynchronous and synchronous network design, hardware design using state equations in a simulation and development environment. The course also treats applications of digital system design. 

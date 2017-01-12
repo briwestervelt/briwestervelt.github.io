@@ -1,0 +1,136 @@
+<style>
+.contact-label{
+  color: var(--secondary-foreground-color);
+}
+
+.contact-info{
+  color: var(--foreground-color);
+}
+
+.contact-glyphicon{
+  color: var(--secondary-foreground-color);
+}
+
+a{
+  color: var(--foreground-color);
+}
+
+a:hover{
+  color: var(--secondary-foreground-color);
+}
+
+.vertical-space{
+  margin-bottom: 4em;
+}
+
+.contact-row{
+  margin-bottom: 1.5em;
+}
+
+.form-row{
+  margin-bottom: 1em
+}
+
+input[type=text], input[type=email], textarea{
+  display: table-cell;
+  width: 90%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid var(--secondary-foreground-color);
+}
+
+label{
+  display: inline-block;
+  text-align: right;
+}
+
+textarea{
+  resize: vertical;
+  height: auto;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+  color: var(--secondary-foreground-color);
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: var(--secondary-foreground-color);
+  opacity: 1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: var(--secondary-foreground-color);
+  opacity: 1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: var(--secondary-foreground-color);
+}
+
+input:focus, textarea:focus{
+  outline: none;
+}
+
+#submit-btn{
+  width: 10em;
+}
+</style>
+
+<div class="vertical-space"></div>
+
+<div class="col-md-3">
+  <div class="col-md-2"></div>
+  <div class="col-md-10">
+    <h4>Contact Info:</h4>
+    <div class="row contact-row"></div>
+    <div class="row contact-row">
+      <span class="contact-glyphicon glyphicon  glyphicon-envelope"></span>
+      <span class="contact-label">Email:</span>
+      <span class="contact-info" id="email"></span>
+    </div>
+    <div class="row contact-row">
+      <span class="contact-glyphicon glyphicon  glyphicon-phone"></span>
+      <span class="contact-label">Cell:</span>
+      <span class="contact-info" id="phone"></span>
+    </div>
+    <div class="row contact-row">
+      <span class="contact-glyphicon glyphicon  glyphicon-map-marker"></span>
+      <span class="contact-label">Location:</span>
+      <span class="contact-info">Newton, NJ</span>
+    </div>
+  </div>
+  <div class="vertical-space"></div>
+</div>
+<div id="form-container" class="col-md-9">
+  <form id="contact-form">
+    <div class="row form-row">
+      <div class="col-lg-1">
+        <label for="name-in">Name:</label>
+      </div>
+      <div class="col-lg-11">
+        <input id="name-in" name="name" type="text" placeholder="Your Name" required/>
+      </div>
+    </div>
+    <div class="row form-row">
+      <div class="col-lg-1">
+        <label for="email-in">Email:</label>
+      </div>
+      <div class="col-lg-11">
+        <input id="email-in" name="email" type="email" placeholder="Your Email" required/>
+      </div>
+    </div>
+    <div class="row form-row">
+      <div class="col-lg-1">
+        <label for="message-in">Message:</label>
+      </div>
+      <div class="col-lg-11">
+        <textarea id="message-in" name="message" type="text" placeholder="Your Message" rows="10" required></textarea>
+      </div>
+    </div>
+    <div class="row form-row">
+      <div class="col-lg-1"></div>
+      <div class="col-lg-11">
+        <input id="submit-btn" class="btn-custom" type="submit" value="Send Message"/>
+      </div>
+    </div>
+    <input type="hidden" name="_next" id="redirect-input"/>
+    <input type="text" name="_gotcha" style="display:none" />
+  </form>
+</div>

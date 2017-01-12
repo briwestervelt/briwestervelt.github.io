@@ -1,0 +1,1 @@
+This course emphasizes programming methodology, algorithms and simple data structures. A programming language rich enough to allow easy implementation of data structures is studied. Prior programming experience in any programming language is expected for this course. 

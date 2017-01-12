@@ -1,0 +1,1 @@
+This course provides an overview of the branch of mathematics commonly known as discrete mathematics. Topics included are sets, relations, functions, induction and other methods of proof, recursion, combinatorics, graph theory, and algorithms. Emphasis is placed on the solution of problems and proofs. The use of graphing calculator is required. 

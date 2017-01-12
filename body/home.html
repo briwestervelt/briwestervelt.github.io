@@ -1,0 +1,134 @@
+<style>
+.jumbotron{
+  background: var(--background-color); /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, #89CEF0, #61B8E2); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, #89CEF0, #61B8E2); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, #89CEF0, #61B8E2); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(right, #89CEF0, #61B8E2); /* Standard syntax*/
+}
+
+
+.caption-link{
+  color: var(--slightly-dark);
+}
+
+.caption-link:hover{
+  color: var(--very-dark)
+}
+
+.overlay:after{
+  content:'\A';
+    position:absolute;
+    width:100%; height:100%;
+    top:0; left:0;
+    background:rgba(0,0,0,0.6);
+    opacity:0;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+
+.overlay:hover:after{
+  opacity: 1;
+}
+</style>
+
+<div class="container">
+  <div class="jumbotron">
+    <div class="row">
+      <div class="col-lg-6">
+        <h1>Brian Westervelt</h1>
+        <h4 class="foreground-light">Embedded Systems Engineer and Backend Web Developer</h4>
+        <p>
+          I'm an electrical and computer engineering major at Rowan University who particularly enjoys software devolment
+          and has strong background in electrical hardware.
+          I am most interested in embedded systems and web development.
+        </p>
+      </div>
+      <div class="col-lg-6">
+        <div id="jumboCarousel" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#jumboCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#jumboCarousel" data-slide-to="1"></li>
+            <li data-target="#jumboCarousel" data-slide-to="2"></li>
+            <li data-target="#jumboCarousel" data-slide-to="3"></li>
+            <li data-target="#jumboCarousel" data-slide-to="4"></li>
+            <li data-target="#jumboCarousel" data-slide-to="5"></li>
+          </ol>
+          <div class="carousel-inner" role="listbox">
+            <div class="item active">
+              <div class="overlay">
+                <img class="img-responsive img-rounded" src="res/jumbo-carousel/holding-bots.JPG">
+                <div class="carousel-caption fading-caption">
+                  <p class="small">Holding our original bot (left) and the our bot that won the competition (right)</p>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="overlay">
+                <img class="img-responsive img-rounded" src="res/jumbo-carousel/profhacks.JPG">
+                <div class="carousel-caption fading-caption">
+                  <p class="small">Working diligently at the first annual
+                    <a href="http://profhacks.com/" target="_blank" class="caption-link">Profhacks</a>
+                    competition</p>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="overlay">
+                <img class="img-responsive img-rounded" src="res/jumbo-carousel/jazz-trumpet.JPG">
+                <div class="carousel-caption fading-caption">
+                  <p class="small">Playing trumpet in the
+                    <a href="https://www.facebook.com/Rowan-Honors-Jazz-Band-1609802335982632/?fref=ts"
+                    target="_blank" class="caption-link">
+                      Rowan Honors Jazz Band
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="overlay">
+                <img class="img-responsive img-rounded" src="res/jumbo-carousel/nv-jump.JPG">
+                <div class="carousel-caption fading-caption">
+                  <p class="small">Performing in
+                    <a href="https://novertebrae.bandcamp.com" target="_blank" class="caption-link">No Vertebrae</a>
+                    with my brother, Andrew (center) and our friend Casey (right)
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="overlay">
+                <img class="img-responsive img-rounded" src="res/jumbo-carousel/profhacks-pebble.JPG">
+                <div class="carousel-caption fading-caption">
+                  <p class="small">The
+                    <a href="https://devpost.com/software/comfort-meister" target="_blank" class="caption-link">Comfort-Meister</a>
+                    Pebble smartwatch app developed at
+                    <a href="http://profhacks.com/" target="_blank" class="caption-link">Profhacks</a>
+                    2016
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="overlay">
+                <img class="img-responsive img-rounded" src="res/jumbo-carousel/family-ottawa.JPG">
+                <div class="carousel-caption fading-caption">
+                  <p class="small">On vacation with my family in Ottawa, Canada</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="left carousel-control" href="#jumboCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#jumboCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

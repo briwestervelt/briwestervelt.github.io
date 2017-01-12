@@ -1,0 +1,119 @@
+<style>
+.dropdown-menu li a { //Add text wrap to menu
+word-wrap: break-word;
+white-space: normal;
+}
+
+.dropdown-menu li:hover {
+    cursor: pointer;
+}
+
+.dropdown-menu{
+  width:100%;
+  text-align: left;
+}
+
+.btn-group{
+  background-color: var(--very-dark);
+}
+
+.fading-caption{
+  opacity: 0;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+
+.overlay:hover .fading-caption{
+  opacity: 1;
+}
+
+.btn:hover{
+  background-color: var(--slightly-light);
+  color: var(--very-dark);
+}
+
+.btn:active{
+  top: 1px;
+  box-shadow: none;
+  background-color: var(--very-light) !important;
+  color: var(--very-dark) !important;
+}
+</style>
+
+<div class="btn-group btn-group-justified">
+	<div class="btn-group">
+		<button type="button" id="btn-home" class="btn btn-primary">
+      <span class="glyphicon glyphicon-home"></span>
+      Home
+    </button>
+	</div>
+  <div class="btn-group">
+		<button type="button" id="btn-resume" class="btn btn-primary">
+      <span class="glyphicon glyphicon-file"></span>
+      Resume
+    </button>
+	</div>
+	<div class="btn-group">
+		<button type="button" id="btn-about" class="btn btn-primary">
+      <span class="glyphicon glyphicon-info-sign"></span>
+      About
+    </button>
+	</div>
+	<div class="btn-group">
+		<button type="button" id="btn-contact" class="btn btn-primary">
+      <span class="glyphicon glyphicon-envelope"></span>
+      Contact
+    </button>
+	</div>
+	<div class="btn-group">
+		<button type="button" id="btn-course-history" class="btn btn-primary">
+      <span class="glyphicon glyphicon-list"></span>
+      Course History
+    </button>
+	</div>
+  <!--div class="btn-group">
+		<button type="button" id="btn-projects" class="btn btn-primary">
+      <span class="glyphicon glyphicon-wrench"></span>
+      Projects
+    </button>
+	</div-->
+</div>
+
+<script>
+var pathToHome = getRootAddress();
+
+$(document).ready(function(){
+  $(".btn, a").mouseup(function(){
+    $(this).blur();
+  });
+
+  $("#btn-home").click(function(){
+    location.href = pathToHome;
+  });
+
+  $("#btn-resume").click(function(){
+    location.href = (pathToHome + "/westervelt-resume.pdf");
+  });
+
+  $("#btn-about").click(function(){
+    location.href = (pathToHome + "?about");
+  });
+
+  $("#btn-contact").click(function(){
+    location.href = (pathToHome + "?contact");
+  });
+
+  $("#btn-course-history").click(function(){
+    location.href = (pathToHome + "?course-history");
+  });
+
+  $("#btn-projects").click(function(){
+    location.href = (pathToHome + "?projects");
+  });
+
+  $("#btn-" + getUrlParam()).css({
+    "background-color": "var(--very-light)",
+    "color": "var(--very-dark)"
+  });
+});
+</script>

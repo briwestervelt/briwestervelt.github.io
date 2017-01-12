@@ -1,0 +1,61 @@
+:root{
+  --background-color: #89CEF0;
+  --foreground-color: #000000;
+  --secondary-foreground-color: #666666;
+  --slightly-dark: #61B8E2;
+  --very-dark: #3E9DCA;
+  --slightly-light: #B8E4FA;
+  --very-light: #F1FAFF;
+}
+
+html{
+  position: relative;
+  min-height: 100%;
+}
+
+body{
+  background-color: var(--background-color);
+  margin: 0 0 32px;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-weight: bolder;
+	font-family: 'Arvo', Georgia, Times, serif;
+}
+
+p, div{
+  line-height: 1.4;
+	font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+}
+
+h1{
+  font-size: 36px !important;
+}
+
+h2{
+  font-size: 30px !important;
+}
+
+h3{
+  font-size: 24px !important;
+}
+
+h4{
+  font-size: 18px !important;
+}
+
+h5{
+  font-size: 14px !important;
+}
+
+h6{
+  font-size: 12px !important;
+}
+
+footer{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 32px;
+  width: 100%;
+}
