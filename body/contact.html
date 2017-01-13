@@ -5,6 +5,14 @@
   width: 7em;
 }
 
+#captcha-container{
+  display: inline-block;
+}
+
+#captcha-error{
+  color: red;
+}
+
 .outline{
   width: 100vw;
 }
@@ -20,10 +28,6 @@
 .bottom-space{
   margin-bottom: 3em;
 }
-
-#captcha-error{
-  color: red;
-}
 </style>
 
 <div id="contact-page">
@@ -35,7 +39,8 @@
     </div>
     <div class="row bottom-space">
       <div class="text-center">
-        <div class="g-recaptcha" data-sitekey="6LcdyBAUAAAAAMG3DorxILHN9eJQ9xuNb5hXsrYZ"></div>
+        <div id="captcha-container"></div>
+        <!--div class="g-recaptcha" data-sitekey="6LcdyBAUAAAAAMG3DorxILHN9eJQ9xuNb5hXsrYZ"></div-->
         <h5 id="captcha-error"></h5>
       </div>
     </div>
@@ -45,23 +50,38 @@
       </div>
     </div>
   </div>
+  <!-- Google Recaptcha-->
+  <script src="https://www.google.com/recaptcha/api.js?onload=loadCaptcha&render=explicit" async defer></script>
 </div>
 
 <script>
+function loadCaptcha(){
+  var captchaContainer = grecaptcha.render("captcha-container", {
+    "sitekey" : "6LcdyBAUAAAAAMG3DorxILHN9eJQ9xuNb5hXsrYZ",
+    "callback" : function(response){
+      console.log(response);
+    }
+  });
+}
+
 function checkCaptcha(){
   return (grecaptcha.getResponse().length != 0);
 }
 
-$("#captcha-submit-btn").click(function(){
-  var captchaSuccess = checkCaptcha();
-  if(captchaSuccess){
-    $("#contact-page").empty();
-    $("#contact-page").load("body/bOtSuCk/contact.html", function(){
-      $.getScript("body/bOtSuCk/completeForm.js");
-    });
-  }
-  else{
-    $("#captcha-error").text("Please check the captcha box");
-  }
+$(document).ready(function(){
+
+  $("#captcha-submit-btn").click(function(){
+    var captchaSuccess = checkCaptcha();
+    if(captchaSuccess){
+      $("#contact-page").empty();
+      $("#contact-page").load("body/bOtSuCk/contact.html", function(){
+        $.getScript("body/bOtSuCk/completeForm.js");
+      });
+    }
+    else{
+      $("#captcha-error").text("Please check the captcha box");
+    }
+  });
+
 });
 </script>
