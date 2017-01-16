@@ -1,9 +1,9 @@
 .section-highlight{
-  background: var(--slightly-light);
+  background: #B8E4FA;
 }
 
 .subsection-highlight{
-  background: var(--very-dark);
+  background: #3E9DCA;
   color: #FFFFFF;
 }
 
@@ -19,15 +19,15 @@
 }
 
 .secondary-foreground{
-  color: var(--secondary-foreground-color);
+  color: #666666;
 }
 
 .offwhite-foreground{
-  color: var(--very-light);
+  color: #F1FAFF;
 }
 
 .offwhite-background{
-  background-color: var(--very-light);
+  background-color: #F1FAFF;
 }
 
 .panel-body{
@@ -35,20 +35,20 @@
 }
 
 .btn-custom{
-  background-color: var(--very-dark);
-  color: var(--very-light);
+  background-color: #3E9DCA;
+  color: #F1FAFF;
   border: none;
   height: 3em;
 }
 
 .btn-custom:hover{
-  background-color: var(--slightly-dark);
-  color: var(--foreground-color);
+  background-color: #61B8E2;
+  color: #000000;
 }
 
 .btn-custom:active{
   top: 1px;
   box-shadow: none;
-  background-color: var(--very-light);
-  color: var(--foreground-color);
+  background-color: #F1FAFF;
+  color: #000000;
 }
