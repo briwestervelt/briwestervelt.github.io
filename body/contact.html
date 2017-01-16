@@ -13,6 +13,10 @@
   color: red;
 }
 
+#curious-text{
+  visibility: hidden;
+}
+
 .outline{
   width: 100vw;
 }
@@ -42,11 +46,15 @@
         <div id="captcha-container"></div>
         <!--div class="g-recaptcha" data-sitekey="6LcdyBAUAAAAAMG3DorxILHN9eJQ9xuNb5hXsrYZ"></div-->
         <h5 id="captcha-error"></h5>
+        <p id="curious-text" class="small">
+          Curious how this checkbox works?
+          <a href="https://security.googleblog.com/2014/12/are-you-robot-introducing-no-captcha.html" target="_blank">Read more</a>
+        </p>
       </div>
     </div>
     <div class="row bottom-space">
       <div class="text-center">
-        <button type="button" id="captcha-submit-btn" class="btn-custom">Submit</button>
+        <button type="button" id="captcha-submit-btn" class="btn-custom">Continue</button>
       </div>
     </div>
   </div>
@@ -56,7 +64,11 @@
 
 <script>
 function setInstructionText(){
-  $("#instruction-text").text("Please complete the following check and click the submit button before continuing to the contact page.");
+  $("#instruction-text").text("Please check the box before continuing to the contact page.");
+}
+
+function setCuriousText(){
+  $("#curious-text").css("visibility", "visible");
 }
 
 function loadCaptcha(){
@@ -68,6 +80,7 @@ function loadCaptcha(){
   });
 
   setInstructionText();
+  setCuriousText();
 }
 
 function checkCaptcha(){
