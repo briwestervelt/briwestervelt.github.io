@@ -16,6 +16,16 @@
   color: #3E9DCA
 }
 
+.fading-caption{
+  opacity: 0;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+
+.overlay:hover .fading-caption{
+  opacity: 1;
+}
+
 .overlay:after{
   content:'\A';
     position:absolute;
