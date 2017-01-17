@@ -1,76 +1,100 @@
 <style>
-.dropdown-menu li a { //Add text wrap to menu
-word-wrap: break-word;
-white-space: normal;
-}
-
-.dropdown-menu li:hover {
-    cursor: pointer;
-}
-
-.dropdown-menu{
-  width:100%;
-  text-align: left;
-}
-
-.btn-group{
+nav{
   background-color: #3E9DCA;
+  margin-bottom: 0px !important;
 }
 
-.btn:hover{
-  background-color: #B8E4FA;
-  color: #3E9DCA;
+.nav-btn{
+  width: 10em;
+  text-align: center;
+  color: #FFFFFF;
 }
 
-.btn:active{
-  top: 1px;
-  box-shadow: none;
-  background-color: #F1FAFF !important;
+.nav-btn:hover{
+  background-color: #B8E4FA !important;
   color: #3E9DCA !important;
+  cursor: pointer;
+
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
+}
+
+.nav-btn:active{
+  top: 2px !important;
+}
+
+@media only screen and (max-width: 767px) {
+  #menu-icon-btn{
+    width: 2.5em;
+    text-align: center;
+  }
+
+  .nav-btn{
+    text-align: left;
+  }
 }
 </style>
 
-<div class="btn-group btn-group-justified">
-	<div class="btn-group">
-		<button type="button" id="btn-home" class="btn btn-primary">
-      <span class="glyphicon glyphicon-home"></span>
-      Home
-    </button>
-	</div>
-  <div class="btn-group">
-		<button type="button" id="btn-resume" class="btn btn-primary">
-      <span class="glyphicon glyphicon-file"></span>
-      Resume
-    </button>
-	</div>
-	<div class="btn-group">
-		<button type="button" id="btn-about" class="btn btn-primary">
-      <span class="glyphicon glyphicon-info-sign"></span>
-      About
-    </button>
-	</div>
-	<div class="btn-group">
-		<button type="button" id="btn-contact" class="btn btn-primary">
-      <span class="glyphicon glyphicon-envelope"></span>
-      Contact
-    </button>
-	</div>
-	<div class="btn-group">
-		<button type="button" id="btn-course-history" class="btn btn-primary">
-      <span class="glyphicon glyphicon-list"></span>
-      Course History
-    </button>
-	</div>
-  <!--div class="btn-group">
-		<button type="button" id="btn-projects" class="btn btn-primary">
-      <span class="glyphicon glyphicon-wrench"></span>
-      Projects
-    </button>
-	</div-->
-</div>
+<nav class="navbar navbar-static-top" type="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <div></div>
+      <button type="button" class="navbar-toggle collapsed nav-btn" id="menu-icon-btn" data-toggle="collapse" data-target="#the-header">
+        <span class="glyphicon glyphicon-menu-hamburger"></span>
+      </button>
+    </div>
+
+    <div id="the-header" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li>
+            <a class="nav-btn" id="btn-home">
+              <span class="glyphicon glyphicon-home"></span>
+              Home
+            </a>
+        </li>
+        <li>
+          <a class="nav-btn" id="btn-resume">
+            <span class="glyphicon glyphicon-file"></span>
+            Resume
+          </a>
+        </li>
+        <li>
+          <a class="nav-btn" id="btn-about">
+            <span class="glyphicon glyphicon-info-sign"></span>
+            About
+          </a>
+        </li>
+        <li>
+          <a class="nav-btn" id="btn-contact">
+            <span class="glyphicon glyphicon-envelope"></span>
+            Contact
+          </a>
+        </li>
+        <li>
+          <a class="nav-btn" id="btn-course-history">
+            <span class="glyphicon glyphicon-list"></span>
+            Course History
+          </a>
+        </li>
+        <!--li><a id="btn-projects">Projects</a></li-->
+      </ul>
+    </div>
+  </div>
+</nav>
 
 <script>
-var pathToHome = getRootAddress();
+var pathToHome = getRootAddress(), urlParam = getUrlParam();
+
+function pathToPrettyString(path){
+  var words = path.split("-");
+
+  for(var i = 0; i < words.length; i++){
+    words[i] = words[i].charAt(0).toUpperCase() + words[i].substring(1);
+  }
+}
 
 $(document).ready(function(){
   $(".btn, a").mouseup(function(){
